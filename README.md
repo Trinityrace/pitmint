@@ -1,5 +1,7 @@
 # pitch project
 
+[![codebeat badge](https://codebeat.co/badges/94f9c943-ee5a-4f91-bb93-e0923c50ce7d)](https://codebeat.co/projects/github-com-trinityrace-pitmint-master)
+
 ## Versioning
 
 Pitches version 1.0, Future releases should have the following features:
