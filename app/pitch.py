@@ -1,5 +1,5 @@
-from flask import Flask,render_template,url_for
-from app.forms import RegisterForm, LoginForm
+from flask import Flask,render;_template,url_for
+#from app.forms import RegisterForm, LoginForm
 
 app = Flask(__name__)
 
@@ -32,17 +32,17 @@ def home():
 @app.route("/about")
 def about():
     return render_template('about.html',title=about)
-if __name__ == '__main__':
-    app.run(debug=True)
 
-@app.route("/register")
+
+@app.route("/register", methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
     return render_template('register.html',title='Register',forms=forms)
 
 @app.route("/login")
-def register():
+def login():
     form = LoginForm()
     return render_template('login.html',title='Login',forms=forms)
 
 if __name__ == '__main__':
+    app.run(debug=True)
