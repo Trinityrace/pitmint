@@ -1,6 +1,3 @@
-# class Config:
-#     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://john:passcoder@localhost/pit'
-
 import os
 class Config:
   '''
@@ -10,6 +7,11 @@ class Config:
   UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
   SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://john:passcoder@localhost/pit'
+  MAIL_SERVER= 'smtp.gnail.com'
+  MAIL_PORT=587
+  MAIL_USE_TLS=True
+  MAIL_USERNAME= os.environ.get("MAIL_USERNAME")
+  MAIL_PASSWORD= os.environ.get("MAIL_PASSWORD")
 
 
 class ProdConfig(Config):
