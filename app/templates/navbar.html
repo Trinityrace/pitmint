@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar bg-primary mb-5 fixed-top">
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand mr-4" href="/"> PITCHES  </a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home </a></li>
+          <li>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+ 
+            <ul class="navbar-nav navbar-right">
+              {% if current_user.is_authenticated %}
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('main.profile',uname=current_user.username)}}">
+                  <i class="fa fa-sign-in"></i>Profile</a>
+              </li><br>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('main.new_pitch',id=current_user.id)}}">
+                  <i class="fa fa-user-plus"></i>new pitch</a>
+              </li><br>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('auth.logout')}}">
+                  <i class="fa fa-user-plus"></i> Sign out</a>
+              </li><br>
+              {%else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('auth.login')}}">
+                  <i class="fa fa-user-plus"></i> Sign in</a>
+              </li>
+              {% endif %}
+            </ul>
+
+            </ul>
+          </div>
+        </li>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<style>
+  .footer{
+  position: fixed;
+  left: o;
+  bottom: 0;
+  line-height: 5opx;
+  padding: 30px;
+  width: 100%;
+  background-color:chartreuse;
+  color:black;
+  text-align: center;
+  margin-bottom: 10px;
+}
+</style>
+<div class="footer">
+  <p>Trinity 2020</p>
+</div>
