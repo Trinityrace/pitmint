@@ -32,10 +32,7 @@
                 <a class="nav-link" href="{{url_for('auth.logout')}}">
                   <i class="fa fa-user-plus"></i> logout</a>
               </li><br>
-              <li class="nav-item">
-                <a class="nav-link" href="{{url_for('auth.profile')}}">
-                  <i class="fa fa-user-plus"></i> profile</a>
-              </li><br>
+
               {%else %}
               <li class="nav-item">
                 <a class="nav-link" href="{{url_for('auth.login')}}">
