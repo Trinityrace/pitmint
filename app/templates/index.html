@@ -1,3 +1,42 @@
-<div>
+<!-- <div>
   <h1>trye</h1>
+</div> -->
+
+{% extends 'base.html'%} {% block content %}
+<div class="container-fluid welcome-page">
+  <div class="container">
+    <div class="row">
+      <div class="card col-md-12 welcome">
+        {%if pitch%} {% for pitches in pitch %}
+        <strong>
+          <p>{{pitches.content}}</p>
+        </strong>
+        <small class="text-muted"
+          >At {{pitches.posted}}
+          <hr
+        /></small>
+
+        {% endfor %} {%else%}
+        <h3>NO PITCHES AVAILABLE</h3>
+        {%endif%}
+      </div>
+    </div>
+  </div>
 </div>
+<style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(170, 6, 6, 0.2);
+      transition: 0.3s;
+      width: 100%;
+    }
+  
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(245, 8, 8, 0.76);
+    }
+  
+    /* .container {
+      padding: 2px 16px; }*/
+    
+  </style>
+{% endblock %}
+
