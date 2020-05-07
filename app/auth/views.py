@@ -10,7 +10,7 @@ from flask_login import login_user,logout_user,login_required
 
 @auth.route('/register',methods = ["GET","POST"])
 def register():
-    form = RegistrationForm()
+    form = RegisterForm()
     if form.validate_on_submit():
         user = User(email = form.email.data, username = form.username.data,password = form.password.data)
         db.session.add(user)

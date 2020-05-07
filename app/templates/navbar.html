@@ -25,16 +25,16 @@
                   <i class="fa fa-sign-in"></i>Profile</a>
               </li><br>
               <li class="nav-item">
-                <a class="nav-link" href="/app/templates/new_pitch.html">
+                <a class="nav-link" href="{{url_for('main.new_pitch')}}">
                   <i class="fa fa-user-plus"></i>new pitch</a>
               </li><br>
               <li class="nav-item">
-                <a class="nav-link" href="/app/templates/profile/profile.html">
+                <a class="nav-link" href="{{url_for('auth.logout')}}">
                   <i class="fa fa-user-plus"></i> profile</a>
               </li><br>
               {%else %}
               <li class="nav-item">
-                <a class="nav-link" href="/app/templates/auth/login.html">
+                <a class="nav-link" href="{{url_for('auth.login')}}">
                   <i class="fa fa-user-plus"></i> Sign in</a>
               </li>
               {% endif %}

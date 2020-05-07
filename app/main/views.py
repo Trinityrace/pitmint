@@ -10,7 +10,7 @@ from .. import photos
 
 app = Flask(__name__)
 
-#app.config['SECRET_KEY']= 'covid'
+app.config['SECRET_KEY']= 'covid'
 
 
 @main.route('/')
@@ -25,9 +25,9 @@ def index():
 
 
 #Route for adding a new pitch
-@main.route('/pitch/new/<int:id>', methods=['GET', 'POST'])
+@main.route('/pitch/new/', methods=['GET', 'POST'])
 @login_required
-def new_pitch(id):
+def new_pitch():
   form = PitchForm()
   if form.validate_on_submit():
     content = form.content.data
