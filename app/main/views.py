@@ -30,8 +30,10 @@ def index():
 def new_pitch():
   form = PitchForm()
   if form.validate_on_submit():
+    category = form.category.data
     content = form.content.data
-    new_pitch= Pitch(content=content, user_id = current_user.id)
+    author = form.author.data
+    new_pitch= Pitch(category=category, content=content, user_id = current_user.id, author=author)
     new_pitch.save_pitch()
     return redirect(url_for('.index', ))
   return render_template('new_pitch.html', pitch_form=form)
