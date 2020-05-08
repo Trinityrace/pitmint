@@ -9,12 +9,14 @@ pitchhs = [
     {
         'author': 'Trinity',
         'title': 'pitch post 1',
+        'category': 'category',
         'content': 'first pitch content',
         'date_posted': 'feb 14, 2009'
     },
     {
         'author': 'Race',
         'title': 'pitch post 2',
+        'category': 'category',
         'content': 'second pitch content',
         'date_posted': 'dec 16, 2010'
     }

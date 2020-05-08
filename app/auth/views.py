@@ -1,6 +1,6 @@
 from flask import render_template
 from .import auth
-from flask import render_template,redirect,url_for,request
+from flask import render_template,redirect,url_for,request,flash
 from ..models import User
 from .forms import RegisterForm,LoginForm
 from .. import db

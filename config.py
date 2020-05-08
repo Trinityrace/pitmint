@@ -4,6 +4,9 @@ class Config:
     General configuration parent class
   '''
   SECRET_KEY = os.environ.get("SECRET_KEY")
+  #app.config['SECRET_KEY']='covid'
+  SECRET_KEY ="covid"
+
   UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
   SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://john:passcoder@localhost/pit'
