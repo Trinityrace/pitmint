@@ -4,6 +4,7 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo,Required
 
 
 class PitchForm(FlaskForm):
+    category = TextAreaField('Category?')
     content = TextAreaField('CREATE PITCH')
     submit = SubmitField('submit')
 

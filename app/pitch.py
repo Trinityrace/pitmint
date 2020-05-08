@@ -3,20 +3,25 @@ from flask import Flask,render;_template,url_for
 
 app = Flask(__name__)
 
-# app.config['SECRET_KEY']= 'covid'
+app.config['SECRET_KEY']= 'covid'
 
 pitchhs = [
     {
         'author': 'Trinity',
         'title': 'pitch post 1',
+        'category': 'category'
         'content': 'first pitch content',
-        'date_posted': 'feb 14, 2009'
+        'date_posted': 'feb 14, 2009',
+        
+        
     },
     {
         'author': 'Race',
         'title': 'pitch post 2',
+        'category': 'category',
         'content': 'second pitch content',
-        'date_posted': 'dec 16, 2010'
+        'date_posted': 'dec 16, 2010',
+;       
     }
     ]
 

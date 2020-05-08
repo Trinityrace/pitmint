@@ -1,6 +1,3 @@
-<!-- <div>
-  <h1>trye</h1>
-</div> -->
 
 {% extends 'base.html'%} {% block content %}
 <div class="container-fluid welcome-page">
@@ -9,6 +6,7 @@
       <div class="card col-md-12 welcome">
         {%if pitch%} {% for pitches in pitch %}
         <strong>
+          <h3>{{pitches.category}}</h3>
           <p>{{pitches.content}}</p>
         </strong>
         <small class="text-muted"

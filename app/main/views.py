@@ -10,7 +10,7 @@ from .. import photos
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY']= 'covid'
+app.config['SECRET_KEY']='covid'
 
 
 @main.route('/')
@@ -30,8 +30,9 @@ def index():
 def new_pitch():
   form = PitchForm()
   if form.validate_on_submit():
+    category = form.category.data
     content = form.content.data
-    new_pitch= Pitch(content=content, user_id = current_user.id)
+    new_pitch= Pitch(category=category, content=content, user_id = current_user.id)
     new_pitch.save_pitch()
     return redirect(url_for('.index', ))
   return render_template('new_pitch.html', pitch_form=form)

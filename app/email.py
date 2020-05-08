@@ -1,6 +1,6 @@
 from flask_mail import Message
 from flask import render_template
-#from .email import email
+from .email import email
 
 
 def mail_message(subject,template,to,**kwargs):
