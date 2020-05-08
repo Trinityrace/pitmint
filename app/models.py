@@ -52,8 +52,8 @@ class Pitch(db.Model):
     __tablename__ = 'pitches'
 
     id = db.Column(db.Integer,primary_key = True)
-    content = db.Column(db.String())
     category = db.Column(db.String())
+    content = db.Column(db.String())
     user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
     author = db.Column(db.String())
     posted = db.Column(db.DateTime,default=datetime.utcnow)
