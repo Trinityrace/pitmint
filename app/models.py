@@ -55,9 +55,9 @@ class Pitch(db.Model):
     category = db.Column(db.String())
     content = db.Column(db.String())
     user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
-    author = db.Column(db.String())
     posted = db.Column(db.DateTime,default=datetime.utcnow)
 
+    # author = db.Column(db.String())
     # comment = db.relationship("Comments", backref="pitches", lazy = "dynamic")
     # vote = db.relationship("Votes", backref="pitches", lazy = "dynamic")
 
