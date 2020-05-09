@@ -37,6 +37,11 @@ def new_pitch():
     # new_pitch= Pitch(category=category, content=content, user_id = current_user.id, author=author)
     new_pitch.save_pitch()
     return redirect(url_for('.index', ))
+
+    db.session.add(new_pitch)
+    db.session.commit()
+
+    title="New_pitch"
   return render_template('new_pitch.html', pitch_form=form)
 
 @main.route('/user/<uname>')

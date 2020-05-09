@@ -9,7 +9,7 @@ class Config:
 
   UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://john:passcoder@localhost/pit'
+  SQLALCHEMY_DATABASE_URI = os.environ.get('postgresql+psycopg2://john:passcoder@localhost/pit')
   MAIL_SERVER= 'smtp.gnail.com'
   MAIL_PORT=587
   MAIL_USE_TLS=True
