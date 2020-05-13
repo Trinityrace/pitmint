@@ -9,7 +9,7 @@ class Config:
 
   UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
-  SQLALCHEMY_DATABASE_URI = os.environ.get('postgresql+psycopg2://john:passcoder@localhost/pit')
+  SQLALCHEMY_DATABASE_URI = os.environ.get('postgresql+psycopg2://john:passcoder@localhost/pyt')
   MAIL_SERVER= 'smtp.gnail.com'
   MAIL_PORT=587
   MAIL_USE_TLS=True
@@ -29,7 +29,7 @@ class ProdConfig(Config):
 
 class TestConfig(Config):
   
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://john:passcoder@localhost/pit_test'
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://john:passcoder@localhost/pyt_test'
 
 class DevConfig(Config):
   '''
@@ -38,7 +38,7 @@ class DevConfig(Config):
         Config: The parent configuration class with General configuration settings
   '''
   
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://john:passcoder@localhost/pit'
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://john:passcoder@localhost/pyt'
 
   DEBUG = True
 
